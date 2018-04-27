@@ -1,0 +1,38 @@
+body 
+{
+    padding-top: 3.5rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.align-middle
+{
+    vertical-align:middle;
+    display:inline;
+}
+
+.btn-login
+{
+    position: absolute;
+    right: 2%;
+    width: 10%;
+}
+
+.label-size
+{
+    font-size: 20px;
+}
+
+.nav-logo-left
+{
+    margin-left:3%
+}
+
+.nav-logo-left-img
+{
+    width:50px;
+}
+
+.width-100
+{
+    width:100% !important;
+}
