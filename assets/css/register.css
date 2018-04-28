@@ -11,3 +11,15 @@ body
     left: 0;
     z-index: 1030;
 }
+
+.footer-btn-center
+{
+    display: inherit;
+    text-align: center;
+}
+
+.size-image-100
+{
+    width: 100px;
+    height: 100px;
+}
