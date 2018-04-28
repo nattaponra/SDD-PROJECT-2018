@@ -2,6 +2,7 @@ body
 {
     padding-top: 3.5rem;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 .align-middle
@@ -32,5 +33,11 @@ body
 
 .button-width-25 {
 	width: 25%;
+}
+
+.align-center
+{
+    text-align: center;
+    align-content: center;
 }
 

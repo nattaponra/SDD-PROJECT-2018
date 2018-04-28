@@ -14,12 +14,6 @@
     z-index: 1030;
 }
 
-.container-fluid
-{
-    padding: 0% !important;
-    margin: 0% !important;
-}
-
 .div-content
 {
    padding-top:10px; 
@@ -36,5 +30,29 @@
     font-weight: bold;
     text-align: right;
     line-height: 2;
+    padding-left: 0px; 
 }
-  
+
+.content-renting-menu
+{
+    left: 25%;
+    right: -7%;
+    top: 14%;
+    position: fixed;
+}
+
+.content-padding {
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 1%;
+}
+
+.title-size {
+    font-size: 15pt;
+}
+
+.icon-size {
+    width: 54%;
+}
+
