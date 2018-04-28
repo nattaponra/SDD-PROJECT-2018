@@ -1,0 +1,32 @@
+.nav-right
+{
+    position: absolute;
+    left: 90% !important;
+    width: 100%;
+}
+
+.fixed-top
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.container-fluid
+{
+    padding: 0% !important;
+    margin: 0% !important;
+}
+
+.div-content
+{
+   padding-top:10px; 
+}
+
+.list-group,.list-group-item
+{
+    border-radius: 0px !important;
+}
+  
