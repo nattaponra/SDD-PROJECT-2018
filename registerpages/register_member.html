@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="../assets/images/logo.png">
+    <title>สมัครสมาชิก</title>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/register.css" rel="stylesheet">
+    <link href="../assets/css/share.css" rel="stylesheet">
+</head>
+<body>
+        <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+           <div class="nav-logo-left">
+                <img class="align-middle nav-logo-left-img" src="../assets/images/logo.png">
+                <h3 class="align-middle">RMSE</h3>
+           </div>
+        </nav>
+
+        <div class="container">
+                <div class="py-5 text-center">
+                        <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+                        <h2>สมัครสมาชิก</h2>
+                </div>
+                <div class="row">
+                        <div class="col-md-12">
+                          <h4 class="mb-3">ข้อมูลส่วนตัว</h4>
+                          <form class="needs-validation" novalidate="">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="username">ชื่อผู้ใช้งาน</label>
+                                    <input type="text" class="form-control" id="username" placeholder="โปรดระบุชื่อผู้ใช้งาน" value="" required="">  
+                                  </div>
+                                  <div class="col-md-6 mb-3">
+                                      <label for="password">รหัสผ่าน</label>
+                                      <input type="password" id="password" class="form-control" placeholder="8-20ตัวอักษร" required="" >
+                                  </div> 
+                            </div>
+
+                            <div class="row">
+                              <div class="col-md-6 mb-3">
+                                <label for="firstname">ชื่อ</label>
+                                <input type="text" class="form-control" id="firstname" placeholder="" value="" required="">
+                              </div>
+                              <div class="col-md-6 mb-3">
+                                <label for="lastname">นามสกุล</label>
+                                <input type="text" class="form-control" id="lastname" placeholder="" value="" required="">
+                              </div>
+                            </div>
+                
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="idcard">รหัสบัตรประชาชน</label>
+                                    <input type="text" class="form-control" id="idcard" placeholder="" required="">
+                                </div>
+                            </div>
+                           
+                            <h4 class="mb-3">ข้อมูลที่อยู่</h4>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="noaddress">บ้านเลขที่</label>
+                                    <input type="text" class="form-control" id="noaddress" placeholder="" value="" required="">
+                                  </div>
+                                  <div class="col-md-6 mb-3">
+                                    <label for="moo">หมู่ที่</label>
+                                    <input type="text" class="form-control" id="moo" placeholder="" value="" required="">
+                                  </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="soi">ซอย</label>
+                                    <input type="text" class="form-control" id="soi" placeholder="" value="" required="">
+                                  </div>
+                                  <div class="col-md-6 mb-3">
+                                    <label for="road">ถนน</label>
+                                    <input type="text" class="form-control" id="road" placeholder="" value="" required="">
+                                  </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="subdistrict">แขวง/ตำบล</label>
+                                    <select class="form-control" name="subdistrict" id="subdistrict">
+                                    <option>1</option>
+                                    </select>
+                                </div>
+                                  <div class="col-md-6 mb-3">
+                                      <label for="prefecture">เขต/อำเภอ</label>
+                                      <select class="form-control" name="prefecture" id="prefecture">
+                                      <option>1</option>
+                                      </select>
+                                  </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="county">จังหวัด</label>
+                                    <select class="form-control" name="county" id="county">
+                                    <option>1</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="zipcode">รหัสไปรษณีย์</label>
+                                    <input type="text" class="form-control" id="zipcode" placeholder="" value="" required="">
+                                  </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone">โทรศัพท์</label>
+                                    <input type="text" class="form-control" id="phone" placeholder="" required="">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="mobilephone">มือถือ</label>
+                                    <input type="text" class="form-control" id="mobilephone" placeholder="" required="" >
+                                </div>
+                            </div>
+                            <hr class="mb-4">
+                            <div class="row">
+                                <button class="btn btn-primary button-width-25" type="submit">ถัดไป</button>
+                                <button class="btn btn-primary button-width-25" type="submit">ยกเลิก</button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+
+        </div>
+        <script  src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <script src="../assets/js/register_member.js"></script>
+        <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+        
+        <script src="../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/vendor/holder.min.js"></script>
+        <script>
+            Holder.addTheme('thumb', {
+                bg: '#55595c',
+                fg: '#eceeef',
+                text: 'Thumbnail'
+            });
+        </script>        
+</body>
+</html>
