@@ -1,0 +1,63 @@
+version: '2'
+
+services:
+    #################### load balance ##########################
+    load_balance:
+        container_name: load_balance
+        image: nattaponra/nginx:1.12
+        ports:
+            - 80:8080
+            - 448:8448
+        depends_on:
+            - web_server
+        volumes:
+            - ./dockers/load_balance/logs:/opt/bitnami/nginx/logs
+            - ./dockers/load_balance/nginx:/bitnami/nginx
+    #################### nginx  ##################################
+    web_server:
+        container_name: web_server
+        image: nattaponra/nginx:1.12
+        depends_on:
+            - phpfpm
+        volumes:
+            - ./dockers/web_server/logs:/opt/bitnami/nginx/logs
+            - ./dockers/web_server/nginx:/bitnami/nginx
+            - ./www:/app
+
+    #################### phpfpm  ##################################
+    phpfpm:
+        container_name: phpfpm
+        image: nattaponra/php-fpm:7.1
+        volumes:
+            - ./dockers/phpfpm:/bitnami/php-fpm
+            - ./www:/app
+
+    #########################################################
+
+
+
+    #################### Database  ##########################
+    mysql:
+        container_name: mysql
+        image: nattaponra/mysql:5.7
+        ports:
+          - 3306:3306
+        volumes:
+            - ./dockers/mysql/data:/bitnami/mysql
+        environment:
+            - MYSQL_ROOT_USER=root
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_USER=my_user
+            - MYSQL_PASSWORD=my_password
+            - MYSQL_DATABASE=my_database
+
+    #################### Database  ##########################
+    phpmyadmin:
+        container_name: phpmyadmin
+        image: phpmyadmin/phpmyadmin
+        depends_on:
+            - mysql
+        environment:
+            - PMA_HOST=mysql
+
+    #########################################################
