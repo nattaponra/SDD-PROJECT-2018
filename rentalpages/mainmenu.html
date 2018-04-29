@@ -52,20 +52,24 @@
                                       </div>
                                       <div class="row align-center menu-left">
                                             <div class="content-padding col-3">
-                                                <img src="../assets/images/rental-management-import.png" id="import-price-menu" class="img-thumbnail icon-size" alt="นำเข้าหรือแก้ไขราคาพื้นที่">
-                                                <p class="title-size">นำเข้าหรือแก้ไขราคาพื้นที่</p>
-                                            </div>
-                                            <div class="content-padding col-3">
                                                 <img src="../assets/images/rental-management-rent.png" id="rent-list-menu" class="img-thumbnail icon-size" alt="การเช่าพื้นที่">
                                                 <select class="form-control" name="rent-list" id="rent-list">
-                                                    <option>การเช่าพื้นที่</option>
-                                                    <option>สร้างการเช่าพื้นที่</option>
-                                                    <option>แก้ไขการเช่าพื้นที่</option>
-                                                    <option>ลบการเช่าพื้นที่</option>
+                                                    <option value="default">รายการเช่าพื้นที่</option>
+                                                    <option value="create-rent-list">- สร้างการเช่าพื้นที่</option>
+                                                    <option value="edit-rent-list">- แก้ไขการเช่าพื้นที่</option>
+                                                    <option value="delete-rent-list">- ลบการเช่าพื้นที่</option>
                                                 </select>
                                             </div>
                                             <div class="content-padding col-3">
-                                                <img src="../assets/images/rental-management-search.png" id="search-area-menu" class="img-thumbnail icon-size" alt="สร้างแบบจำลองพื้นที่">
+                                                <img src="../assets/images/rental-management-import.png" id="manage-pricing-menu" class="img-thumbnail icon-size" alt="นำเข้าหรือแก้ไขราคาพื้นที่">
+                                                <select class="form-control" name="pricing-list" id="pricing-list">
+                                                    <option value="default">ราคาพื้นที่</option>
+                                                    <option value="import-pricing">- นำเข้าราคาพื้นที่</option>
+                                                    <option value="edit-pricing">- แก้ไขราคาพื้นที่</option>
+                                                </select>
+                                            </div>
+                                            <div class="content-padding col-3">
+                                                <img src="../assets/images/rental-management-search.png" id="search-area-menu" class="img-thumbnail icon-size" alt="ค้นหาแบบจำลองพื้นที่">
                                                 <p class="title-size">ค้นหารายละเอียด</p>
                                             </div>
                                       </div>

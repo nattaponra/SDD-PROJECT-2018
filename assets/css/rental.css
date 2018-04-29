@@ -40,6 +40,13 @@
     padding-bottom: 1%;
 }
 
+.content-padding2 {
+    padding-top: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 1%;
+}
+
 .title-size {
     font-size: 15pt;
 }
