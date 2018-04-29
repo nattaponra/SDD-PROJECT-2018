@@ -35,8 +35,8 @@
                       <div class="tab-content" id="v-pills-tabContent">
                           <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">เนื้อที่สำหรับหน้าแรก</div>
                           <div class="tab-pane fade" id="v-pills-renting" role="tabpanel" aria-labelledby="v-pills-renting-tab">
-                              <div class="content-renting-menu">
-                                    <div class="row align-center">
+                              <div id="context-menu-renting">
+                                    <div class="row align-center menu-left">
                                             <div class="content-padding col-3">
                                               <img src="../assets/images/rental-management-create.png" id="create-model-menu" class="img-thumbnail icon-size" alt="สร้างแบบจำลองพื้นที่">
                                               <p class="title-size">สร้างแบบจำลองพื้นที่</p>
@@ -50,23 +50,19 @@
                                                 <p class="title-size">ลบแบบจำลองพื้นที่</p>
                                             </div>
                                       </div>
-                                      <div class="row align-center">
+                                      <div class="row align-center menu-left">
                                             <div class="content-padding col-3">
                                                 <img src="../assets/images/rental-management-import.png" id="import-price-menu" class="img-thumbnail icon-size" alt="นำเข้าหรือแก้ไขราคาพื้นที่">
                                                 <p class="title-size">นำเข้าหรือแก้ไขราคาพื้นที่</p>
                                             </div>
                                             <div class="content-padding col-3">
                                                 <img src="../assets/images/rental-management-rent.png" id="rent-list-menu" class="img-thumbnail icon-size" alt="การเช่าพื้นที่">
-                                                <div class="dropdown">
-                                                    <button class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown">
-                                                        การเช่าพื้นที่
-                                                        <span class="caret"></span></button>
-                                                        <ul class="dropdown-menu">
-                                                                <li><a href="#">สร้างการเช่าพื้นที่</a></li>
-                                                                <li><a href="#">แก้ไขการเช่าพื้นที่</a></li>
-                                                                <li><a href="#">ลบการเช่าพื้นที่</a></li>
-                                                              </ul>
-                                                </div>
+                                                <select class="form-control" name="rent-list" id="rent-list">
+                                                    <option>การเช่าพื้นที่</option>
+                                                    <option>สร้างการเช่าพื้นที่</option>
+                                                    <option>แก้ไขการเช่าพื้นที่</option>
+                                                    <option>ลบการเช่าพื้นที่</option>
+                                                </select>
                                             </div>
                                             <div class="content-padding col-3">
                                                 <img src="../assets/images/rental-management-search.png" id="search-area-menu" class="img-thumbnail icon-size" alt="สร้างแบบจำลองพื้นที่">
@@ -74,6 +70,62 @@
                                             </div>
                                       </div>
                               </div>
+                                  <!--context create model feature renting-->
+                                  <div id="div-create-model-context" class="hidden content-renting-menu row" style="margin-top: 1%;justify-content: center;"> 
+                                        <form id="form-create-model" class="needs-validation" novalidate="" style="display: flex;">
+                                           <div class="col-md-6" style="margin-right: 2%;margin-left: 2%;">
+                                                       <div class="form-group">
+                                                           <h4>สร้างแบบจำลองพื้นที่</h4>
+                                                           <div class="input-group" style="padding-top: 2%;">
+                                                               <span class="input-group-btn">
+                                                                   <input type="file" class="form-control-file" id="imgInput">
+                                                               </span>
+                                                           </div>
+                                                           <img id='img-upload' src="../assets/images/blueprint.png"/>
+                                                       </div>
+                                                       <!-- table input data model-->
+                                                       <table class="table table-bordered">
+                                                               <thead>
+                                                                 <tr>
+                                                                   <th scope="col">#</th>
+                                                                   <th scope="col">รหัสพื้นที่</th>
+                                                                   <th scope="col">ขนาด</th>
+                                                                   <th scope="col">สถานะ</th>
+                                                                 </tr>
+                                                               </thead>
+                                                               <tbody>
+                                                                 <tr>
+                                                                   <th scope="row">1</th>
+                                                                   <td> <input type="text" class="form-control" id="codearea" placeholder="" value="" required=""></td>
+                                                                   <td> <input type="text" class="form-control" id="volumnarea" placeholder="" value="" required=""></td>
+                                                                   <td> <input type="text" class="form-control" id="statusarea" placeholder="" value="" required=""></td>
+                                                                 </tr>
+                                                               </tbody>
+                                                       </table>
+                                                       <!--end table input data model-->
+                                           </div>
+                                               <div class="col-md-4" style="padding-top: 3%;">
+                                                           <div>
+                                                                   <h4 class="mb-3">ขนาดของแบบจำลอง</h4>
+                                                                   <div>
+                                                                     <label for="addressStore">กว้าง</label>
+                                                                     <input type="text" class="form-control" id="model-width" placeholder="" value="" required="">
+                                                                   </div>
+                                                                   <div>
+                                                                     <label for="mooStore">ยาว</label>
+                                                                     <input type="text" class="form-control" id="model-height" placeholder="" value="" required="">
+                                                                   </div>
+                                                                   <div class="row btn-footer-create-model">
+                                                                           <button class="btn btn-primary button-margin-2" type="submit">บันทีก</button>
+                                                                           <button class="btn btn-danger button-margin-2"
+                                                                            type="button"
+                                                                            id="btn-cancel-create-model">ยกเลิก</button>
+                                                                   </div> 
+                                                            </div>
+                                               </div>                                                
+                                        </form>
+                                  </div> 
+                                  <!--end context create model feature renting-->
                           </div>
                           <div class="tab-pane fade" id="v-pills-management-data" role="tabpanel" aria-labelledby="v-pills-management-data-tab">เนื้อที่จัดการข้อมูล</div>
                           <div class="tab-pane fade" id="v-pills-report" role="tabpanel" aria-labelledby="v-pills-report-tab">เนื้อที่สำหรับการออกรายงาน</div>

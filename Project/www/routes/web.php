@@ -12,5 +12,20 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('main');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/registers', 'HomeController@registerOption');
+
+
+
+Route::get("/dashboard","DashboardController@index");
+
+
+Route::get("logout",function(){
+    Auth::logout();
+    return redirect("/");
 });
