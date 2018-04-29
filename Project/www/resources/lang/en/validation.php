@@ -1,4 +1,4 @@
-<?php
+Register<?php
 
 return [
 

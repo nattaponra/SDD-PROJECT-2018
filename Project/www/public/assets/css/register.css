@@ -1,0 +1,25 @@
+body
+{
+    margin: 2%;
+}
+
+.fixed-top
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.footer-btn-center
+{
+    display: inherit;
+    text-align: center;
+}
+
+.size-image-100
+{
+    width: 100px;
+    height: 100px;
+}
