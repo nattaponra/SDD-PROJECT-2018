@@ -35,7 +35,7 @@
                       <div class="tab-content" id="v-pills-tabContent">
                           <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">เนื้อที่สำหรับหน้าแรก</div>
                           <div class="tab-pane fade" id="v-pills-renting" role="tabpanel" aria-labelledby="v-pills-renting-tab">
-                              <div class="content-renting-menu">
+                              <div class="content-renting-menu" id="context-menu-renting">
                                     <div class="row align-center">
                                             <div class="content-padding col-3">
                                               <img src="../assets/images/rental-management-create.png" id="create-model-menu" class="img-thumbnail icon-size" alt="สร้างแบบจำลองพื้นที่">
@@ -70,6 +70,21 @@
                                             </div>
                                       </div>
                               </div>
+                                  <!--context create model feature renting-->
+                                  <div id="div-create-model-context" class="hidden content-renting-menu"> 
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <h4>สร้างแบบจำลองพื้นที่</h4>
+                                                <div class="input-group">
+                                                    <span class="input-group-btn">
+                                                        <input type="file" class="form-control-file" id="imgInput">
+                                                    </span>
+                                                </div>
+                                                <img id='img-upload' src="../assets/images/blueprint.png"/>
+                                            </div>
+                                        </div>
+                                      </div> 
+                                   <!--end context create model feature renting-->
                           </div>
                           <div class="tab-pane fade" id="v-pills-management-data" role="tabpanel" aria-labelledby="v-pills-management-data-tab">เนื้อที่จัดการข้อมูล</div>
                           <div class="tab-pane fade" id="v-pills-report" role="tabpanel" aria-labelledby="v-pills-report-tab">เนื้อที่สำหรับการออกรายงาน</div>
