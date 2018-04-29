@@ -29,6 +29,7 @@ class CreateUsersTable extends Migration
             $table->string("province")->nullable();
             $table->string("postal_code")->nullable();
             $table->string('email')->unique();
+            $table->integer('role_id')->index();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
