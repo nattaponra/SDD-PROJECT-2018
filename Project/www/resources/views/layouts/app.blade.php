@@ -5,7 +5,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Pricing example for Bootstrap</title>
+    <title>ระบบการจัดการการสำรองพื้นที่</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{url("/")}}/assets/css/bootstrap.min.css" rel="stylesheet">
@@ -16,7 +16,8 @@
 <body>
 
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-    <h5 class="my-0 mr-md-auto font-weight-normal">ระบบการจัดการการสำรองพื้นที่</h5>
+
+    <h5 class="my-0 mr-md-auto font-weight-normal"><a style="text-decoration: none;" href="{{url("/")}}"><img style="max-width: 40px;" src="{{url('/')}}/assets/images/logo.png"> ระบบการจัดการการสำรองพื้นที่</a></h5>
     <nav class="my-2 my-md-0 mr-md-3">
         <a class="p-2 text-dark" href="#">ฟังชั่นการใช้งาน</a>
         <a class="p-2 text-dark" href="#">สนับสนุน</a>
