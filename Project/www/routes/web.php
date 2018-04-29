@@ -24,6 +24,8 @@ Route::get('/registers', 'HomeController@registerOption');
 
 Route::get("/dashboard","DashboardController@index");
 
+Route::get("/dashboard/profile","UserController@profile");
+Route::post("/dashboard/profile","UserController@profile");
 
 Route::get("logout",function(){
     Auth::logout();
