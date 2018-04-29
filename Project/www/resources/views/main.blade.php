@@ -8,17 +8,11 @@
             <h2 class="jumbotron-heading">ค้นหาบูทงานที่สนใจ</h2>
             <form action="?" method="get">
                 <div class="row">
-                    <div class="col ">
-
-                    </div>
-
+                    <div class="col "></div>
                     <div class="col-8">
                         <p   class="lead text-muted"  ><input align="center" type="text" class="form-control" placeholder="ชื่อกิจกรรม,ชื่อบูท,ชื่อสถานที่"  name="search"></p>
-
                     </div>
-                    <div class="col">
-
-                    </div>
+                    <div class="col"></div>
                 </div>
                 <p>
                     <button type="submit" class="btn btn-primary my-2">เริ่มค้นหา</button>
