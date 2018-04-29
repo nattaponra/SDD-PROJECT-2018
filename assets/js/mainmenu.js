@@ -12,7 +12,8 @@ $(function(){
         });
 
         $('#delete-model-menu').click(function() {
-            alert("hello");
+            $("#context-menu-renting").addClass("hidden");
+            $("#div-delete-model-context").removeClass("hidden");
         });
 
         $('#import-price-menu').click(function() {
@@ -56,6 +57,12 @@ $(function(){
         $('#form-edit-model')[0].reset();
         $("#context-menu-renting").removeClass("hidden");
         $("#div-edit-model-context").addClass("hidden"); 
+    });
+
+    $("#btn-cancel-delete-model").click(function(){
+        $('#form-delete-model')[0].reset();
+        $("#context-menu-renting").removeClass("hidden");
+        $("#div-delete-model-context").addClass("hidden"); 
     });
 
     function checkTypeFiles(fileType)
