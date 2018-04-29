@@ -11,13 +11,13 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-        <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
-           <div class="nav-logo-left">
+        <nav class="navbar navbar-expand-md fixed-top bg-dark navbar-dark">
+            <div class="nav-logo-left">
                 <img class="align-middle nav-logo-left-img" src="../assets/images/logo.png">
-                <h3 class="align-middle">RMSE</h3>
-           </div>
+                <h3 class="align-middle" style="color: white">RMSE</h3>
+            </div>
             <div class="nav-right">
-                <button class="btn btn-primary" type="submit">ออกจากระบบ</button>
+                <button class="btn btn-danger" type="submit">ออกจากระบบ</button>
             </div>
         </nav>
           <div class="container-fluid">
@@ -54,7 +54,7 @@
                                       <div class="row align-center menu-left">
                                             <div class="content-padding col-3">
                                                 <img src="../assets/images/rental-management-rent.png" id="rent-list-menu" class="img-thumbnail icon-size" alt="การเช่าพื้นที่">
-                                                <select class="form-control" name="rent-list" id="rent-list">
+                                                <select class="form-control" name="rent-list" id="rent-list" style="margin-top: 5%">
                                                     <option value="default">รายการเช่าพื้นที่</option>
                                                     <option value="create-rent-list">- สร้างการเช่าพื้นที่</option>
                                                     <option value="edit-rent-list">- แก้ไขการเช่าพื้นที่</option>
@@ -63,7 +63,7 @@
                                             </div>
                                             <div class="content-padding col-3">
                                                 <img src="../assets/images/rental-management-import.png" id="manage-pricing-menu" class="img-thumbnail icon-size" alt="นำเข้าหรือแก้ไขราคาพื้นที่">
-                                                <select class="form-control" name="pricing-list" id="pricing-list">
+                                                <select class="form-control" name="pricing-list" id="pricing-list" style="margin-top: 5%">
                                                     <option value="default">ราคาพื้นที่</option>
                                                     <option value="import-pricing">- นำเข้าราคาพื้นที่</option>
                                                     <option value="edit-pricing">- แก้ไขราคาพื้นที่</option>
@@ -74,175 +74,179 @@
                                                 <p class="title-size">ค้นหารายละเอียด</p>
                                             </div>
                                       </div>
-                              </div>
-                                  <!--context create model feature renting-->
-                                  <div id="div-create-model-context" class="hidden content-renting-menu row" style="margin-top: 1%;justify-content: center;"> 
+                                </div>
+                                    
+                                    <!--context create model feature renting-->
+                                    <div id="div-create-model-context" class="hidden content-renting-menu row" style="margin-top: 1%;justify-content: center;"> 
                                         <form id="form-create-model" class="needs-validation" novalidate="" style="display: flex;">
-                                           <div class="col-md-6" style="margin-right: 2%;margin-left: 2%;">
-                                                       <div class="form-group">
-                                                           <h4>สร้างแบบจำลองพื้นที่</h4>
-                                                           <div class="input-group" style="padding-top: 2%;">
-                                                               <span class="input-group-btn">
-                                                                   <input type="file" class="form-control-file" id="imgInput">
-                                                               </span>
-                                                           </div>
-                                                           <img id='img-upload' src="../assets/images/blueprint.png"/>
-                                                       </div>
-                                                       <!-- table input data model-->
-                                                       <table class="table table-bordered">
-                                                               <thead>
-                                                                 <tr>
-                                                                   <th scope="col">#</th>
-                                                                   <th scope="col">รหัสพื้นที่</th>
-                                                                   <th scope="col">ขนาด</th>
-                                                                   <th scope="col">สถานะ</th>
-                                                                 </tr>
-                                                               </thead>
-                                                               <tbody>
-                                                                 <tr>
-                                                                   <th scope="row">1</th>
-                                                                   <td> <input type="text" class="form-control" id="codearea" placeholder="" value="" required=""></td>
-                                                                   <td> <input type="text" class="form-control" id="volumnarea" placeholder="" value="" required=""></td>
-                                                                   <td> <input type="text" class="form-control" id="statusarea" placeholder="" value="" required=""></td>
-                                                                 </tr>
-                                                               </tbody>
-                                                       </table>
-                                                       <!--end table input data model-->
-                                           </div>
-                                               <div class="col-md-4" style="padding-top: 3%;">
-                                                           <div>
-                                                                   <h4 class="mb-3">ข้อมูลแบบจำลอง</h4>
-                                                                   <div>
-                                                                        <label for="model-name">ชื่อแบบจำลองพื้นที่</label>
-                                                                        <input type="text" class="form-control" id="model-name" placeholder="" value="" required="">
-                                                                    </div>
-                                                                   <div>
-                                                                     <label for="model-width">กว้าง</label>
-                                                                     <input type="text" class="form-control" id="model-width" placeholder="" value="" required="">
-                                                                   </div>
-                                                                   <div>
-                                                                     <label for="model-height">ยาว</label>
-                                                                     <input type="text" class="form-control" id="model-height" placeholder="" value="" required="">
-                                                                   </div>
-                                                                   <div class="row btn-footer-create-model">
-                                                                           <button class="btn btn-primary  button-width-25 button-margin-2" type="submit">บันทึก</button>
-                                                                           <button class="btn btn-danger  button-width-25 button-margin-2"
-                                                                            type="button"
-                                                                            id="btn-cancel-create-model">ยกเลิก</button>
-                                                                   </div> 
-                                                            </div>
-                                               </div>                                                
-                                        </form>
-                                  </div> 
-                                  <!--end context create model feature renting-->
-
-                                  <!--context edit model feature renting-->
-                                  <div id="div-edit-model-context" class="hidden content-renting-menu row" style="margin-top: 1%;justify-content: center;"> 
-                                        <form id="form-edit-model" class="needs-validation" novalidate="" style="display: flex;">
-                                           <div class="col-md-6" style="margin-right: 2%;margin-left: 2%;">
-                                                       <div class="form-group">
-                                                           <h4>แก้ไขแบบจำลองพื้นที่</h4>
-                                                           <div class="input-group" style="padding-top: 2%;">
-                                                                <select class="form-control" name="modelname" id="modelname">
-                                                                        <option>ชื่อแบบจำลองพื้นที่</option>
-                                                                </select>
-                                                           </div>
-                                                           <img id='img-upload' src="../assets/images/blueprint.png"/>
-                                                       </div>
-                                                       <!-- table input data model-->
-                                                       <table class="table table-bordered">
-                                                               <thead>
-                                                                 <tr>
-                                                                   <th scope="col">#</th>
-                                                                   <th scope="col">รหัสพื้นที่</th>
-                                                                   <th scope="col">ขนาด</th>
-                                                                   <th scope="col">สถานะ</th>
-                                                                 </tr>
-                                                               </thead>
-                                                               <tbody>
-                                                                 <tr>
-                                                                   <th scope="row">1</th>
-                                                                   <td> <input type="text" class="form-control" id="codearea" placeholder="" value="" required=""></td>
-                                                                   <td> <input type="text" class="form-control" id="volumnarea" placeholder="" value="" required=""></td>
-                                                                   <td> <input type="text" class="form-control" id="statusarea" placeholder="" value="" required=""></td>
-                                                                 </tr>
-                                                               </tbody>
-                                                       </table>
-                                                       <!--end table input data model-->
-                                           </div>
-                                               <div class="col-md-4" style="padding-top: 3%;">
-                                                           <div>
-                                                                   <h4 class="mb-3">ข้อมูลแบบจำลอง</h4>
-                                                                   <div>
-                                                                        <label for="model-edit-name">ชื่อแบบจำลองพื้นที่</label>
-                                                                        <input type="text" class="form-control" id="model-edit-name" placeholder="" value="" required="">
-                                                                    </div>
-                                                                   <div>
-                                                                     <label for="model-edit-width">กว้าง</label>
-                                                                     <input type="text" class="form-control" id="model-edit-width" placeholder="" value="" required="">
-                                                                   </div>
-                                                                   <div>
-                                                                     <label for="model-edit-height">ยาว</label>
-                                                                     <input type="text" class="form-control" id="model-edit-height" placeholder="" value="" required="">
-                                                                   </div>
-                                                                   <div class="row btn-footer-create-model">
-                                                                           <button class="btn btn-primary button-width-25 button-margin-2" type="submit">บันทึก</button>
-                                                                           <button class="btn btn-danger button-width-25 button-margin-2"
-                                                                            type="button" id="btn-cancel-edit-model">ยกเลิก</button>
-                                                                   </div> 
-                                                            </div>
-                                               </div>                                                
-                                        </form>
-                                  </div>                 
-                                  <!--end context edit model feature renting-->
-
-                                  <!--context delete model feature renting-->
-                                  <div id="div-delete-model-context" class="hidden content-renting-menu row" style="margin-top: 1%;justify-content: center;"> 
-                                    <form id="form-delete-model" class="needs-validation" novalidate="" style="display: flex;">
-                                       <div class="col-md-6" style="margin-right: 2%;margin-left: 2%;">
-                                                   <div class="form-group">
-                                                       <h4>ลบแบบจำลองพื้นที่</h4>
-                                                       <div class="input-group" style="padding-top: 2%;">
-                                                            <select class="form-control" name="deletemodelname" id="deletemodelname">
-                                                                    <option>ชื่อแบบจำลองพื้นที่</option>
-                                                            </select>
-                                                       </div>
-                                                       <img id='img-upload' src="../assets/images/blueprint.png"/>
-                                                   </div>
-                                                   <!-- table input data model-->
-                                                   <table class="table table-bordered">
-                                                           <thead>
-                                                             <tr>
-                                                               <th scope="col">#</th>
-                                                               <th scope="col">รหัสพื้นที่</th>
-                                                               <th scope="col">ขนาด</th>
-                                                               <th scope="col">สถานะ</th>
-                                                             </tr>
-                                                           </thead>
-                                                           <tbody>
-                                                             <tr>
-                                                               <th scope="row">1</th>
-                                                               <td> <input type="text" class="form-control" id="codearea" placeholder="" value="" readonly></td>
-                                                               <td> <input type="text" class="form-control" id="volumnarea" placeholder="" value="" readonly ></td>
-                                                               <td> <input type="text" class="form-control" id="statusarea" placeholder="" value="" readonly></td>
-                                                             </tr>
-                                                           </tbody>
-                                                   </table>
-                                                   <!--end table input data model-->
-                                       </div>
-                                           <div class="col-md-4" style="padding-top: 3%;">
-                                                       <div>
-                                                               <div class="row btn-footer-create-model">
-                                                                       <button class="btn btn-primary button-width-25 button-margin-2" type="submit">ลบ</button>
-                                                                       <button class="btn btn-danger  button-width-25 button-margin-2"
-                                                                        type="button" id="btn-cancel-delete-model">ยกเลิก</button>
-                                                               </div> 
+                                            <div class="row content-padding">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <h4>สร้างแบบจำลองพื้นที่</h4>
+                                                        <div class="input-group" style="padding-top: 2%;">
+                                                            <span class="input-group-btn">
+                                                                <input type="file" class="form-control-file" id="imgInput">
+                                                            </span>
                                                         </div>
-                                           </div>                                                
-                                    </form>
-                                  </div>                 
-                                  <!--end context edit model feature renting-->     
-                          </div>
+                                                        <img id='img-upload' src="../assets/images/blueprint.png"/>
+                                                    </div>
+                                                    
+                                                    <!-- table input data model-->
+                                                    <table class="table table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">#</th>
+                                                                <th scope="col">รหัสพื้นที่</th>
+                                                                <th scope="col">ขนาด</th>
+                                                                <th scope="col">สถานะ</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">1</th>
+                                                                <td> <input type="text" class="form-control" id="codearea" placeholder="" value="" required=""></td>
+                                                                <td> <input type="text" class="form-control" id="volumnarea" placeholder="" value="" required=""></td>
+                                                                <td> <input type="text" class="form-control" id="statusarea" placeholder="" value="" required=""></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <!--end table input data model-->
+                                                </div>
+                                                <div class="col-md-6" style="padding-left: 6%; padding-right: 2%">
+                                                    <h4 class="mb-3">ข้อมูลแบบจำลอง</h4>
+                                                    <div>
+                                                        <label for="model-name">ชื่อแบบจำลองพื้นที่</label>
+                                                        <input type="text" class="form-control" id="model-name" placeholder="" value="" required="">
+                                                    </div>
+                                                    <div>
+                                                        <label for="model-width">กว้าง</label>
+                                                        <input type="text" class="form-control" id="model-width" placeholder="" value="" required="">
+                                                    </div>
+                                                    <div>
+                                                        <label for="model-height">ยาว</label>
+                                                        <input type="text" class="form-control" id="model-height" placeholder="" value="" required="">
+                                                    </div>
+                                                    <div class="row btn-footer-create-model">
+                                                        <button class="btn btn-primary button-width-25 button-margin-2" type="submit">บันทึก</button>
+                                                        <button class="btn btn-primary button-width-25 button-margin-2"
+                                                            type="button"
+                                                            id="btn-cancel-create-model">ยกเลิก</button>
+                                                    </div>
+                                                </div>
+                                            </div>                                             
+                                        </form>
+                                    </div> 
+                                    <!--end context create model feature renting-->
+
+                                    <!--context edit model feature renting-->
+                                    <div id="div-edit-model-context" class="hidden content-renting-menu row" style="margin-top: 1%;justify-content: center;"> 
+                                        <form id="form-edit-model" class="needs-validation" novalidate="" style="display: flex;">
+                                            <div class="row content-padding">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <h4>แก้ไขแบบจำลองพื้นที่</h4>
+                                                        <div class="input-group" style="padding-top: 2%;">
+                                                            <select class="form-control" name="modelname" id="modelname">
+                                                                <option>ชื่อแบบจำลองพื้นที่</option>
+                                                            </select>
+                                                        </div>
+                                                        <img id='img-upload' src="../assets/images/blueprint.png"/>
+                                                    </div>
+                                                        
+                                                    <!-- table input data model-->
+                                                    <table class="table table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">#</th>
+                                                                <th scope="col">รหัสพื้นที่</th>
+                                                                <th scope="col">ขนาด</th>
+                                                                <th scope="col">สถานะ</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">1</th>
+                                                                <td> <input type="text" class="form-control" id="codearea" placeholder="" value="" required=""></td>
+                                                                <td> <input type="text" class="form-control" id="volumnarea" placeholder="" value="" required=""></td>
+                                                                <td> <input type="text" class="form-control" id="statusarea" placeholder="" value="" required=""></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <!--end table input data model-->
+                                                </div>
+                                                <div class="col-md-6" style="padding-left: 6%; padding-right: 2%">
+                                                    <h4 class="mb-3">ข้อมูลแบบจำลอง</h4>
+                                                    <div>
+                                                        <label for="model-edit-name">ชื่อแบบจำลองพื้นที่</label>
+                                                        <input type="text" class="form-control" id="model-edit-name" placeholder="" value="" required="">
+                                                    </div>
+                                                    <div>
+                                                        <label for="model-edit-width">กว้าง</label>
+                                                        <input type="text" class="form-control" id="model-edit-width" placeholder="" value="" required="">
+                                                    </div>
+                                                    <div>
+                                                        <label for="model-edit-height">ยาว</label>
+                                                        <input type="text" class="form-control" id="model-edit-height" placeholder="" value="" required="">
+                                                    </div>
+                                                    <div class="row btn-footer-create-model">
+                                                        <button class="btn btn-primary button-width-25 button-margin-2" type="submit">บันทึก</button>
+                                                        <button class="btn btn-primary button-width-25 button-margin-2"
+                                                            type="button" id="btn-cancel-edit-model">ยกเลิก</button>
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                        </form>
+                                    </div>                 
+                                    <!--end context edit model feature renting-->
+
+                                    <!--context delete model feature renting-->
+                                    <div id="div-delete-model-context" class="hidden content-renting-menu row" style="margin-top: 1%;justify-content: center;"> 
+                                        <form id="form-delete-model" class="needs-validation" novalidate="" style="display: flex;">
+                                            <div class="row content-padding">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <h4>ลบแบบจำลองพื้นที่</h4>
+                                                        <div class="input-group" style="padding-top: 2%;">
+                                                            <select class="form-control" name="deletemodelname" id="deletemodelname">
+                                                                <option>ชื่อแบบจำลองพื้นที่</option>
+                                                            </select>
+                                                        </div>
+                                                        <img id='img-upload' src="../assets/images/blueprint.png"/>
+                                                    </div>
+                                                    
+                                                    <!-- table input data model-->
+                                                    <table class="table table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">#</th>
+                                                                <th scope="col">รหัสพื้นที่</th>
+                                                                <th scope="col">ขนาด</th>
+                                                                <th scope="col">สถานะ</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th scope="row">1</th>
+                                                                <td> <input type="text" class="form-control" id="codearea" placeholder="" value="" readonly></td>
+                                                                <td> <input type="text" class="form-control" id="volumnarea" placeholder="" value="" readonly ></td>
+                                                                <td> <input type="text" class="form-control" id="statusarea" placeholder="" value="" readonly></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <!--end table input data model-->
+                                                </div>
+                                                <div class="col-md-6" style="padding-left: 6%; padding-right: 2%">
+                                                    <div class="row btn-footer-create-model">
+                                                        <button class="btn btn-primary button-width-25 button-margin-2" type="submit">ลบ</button>
+                                                        <button class="btn btn-primary button-width-25 button-margin-2"
+                                                            type="button" id="btn-cancel-delete-model">ยกเลิก</button>
+                                                    </div>
+                                                </div> 
+                                            </div>                                        
+                                        </form>
+                                    </div>                 
+                                    <!--end context edit model feature renting-->     
+                            </div>
                           <div class="tab-pane fade" id="v-pills-management-data" role="tabpanel" aria-labelledby="v-pills-management-data-tab">เนื้อที่จัดการข้อมูล</div>
                           <div class="tab-pane fade" id="v-pills-report" role="tabpanel" aria-labelledby="v-pills-report-tab">เนื้อที่สำหรับการออกรายงาน</div>
                           <div class="tab-pane fade" id="v-pills-payment" role="tabpanel" aria-labelledby="v-pills-payment-tab">เนื้อที่สำหรับการชำระเงิน</div>

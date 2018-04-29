@@ -34,7 +34,7 @@
 }
 
 .content-padding {
-    padding-top: 4%;
+    padding-top: 3%;
     padding-left: 2%;
     padding-right: 2%;
     padding-bottom: 1%;
@@ -49,11 +49,12 @@
 
 .title-size {
     font-size: 15pt;
+    margin-top: 5%;
 }
 
 .icon-size {
     border: 7px solid transparent;
-    width: 55%;
+    width: 57%;
 }
 
 .icon-size:hover {
