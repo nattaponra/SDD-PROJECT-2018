@@ -16,6 +16,6 @@ class DatabaseSeeder extends Seeder
         //Role
         Role::create(["name"=>"ผู้ใช้ทั่วไป"]);
         Role::create(["name"=>"ผู้จัดงาน"]);
-        Role::create(["name"=>"ผู้จองสถานที่"]);
+        Role::create(["name"=>"ผู้เช่าสถานที่"]);
     }
 }

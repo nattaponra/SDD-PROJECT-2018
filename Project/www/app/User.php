@@ -27,7 +27,11 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function getRole(){
+        return $this->hasOne("App\Role","id","role_id");
+    }
 
-
-
+    public function updateProfile(User $user){
+        $this->where("id",$user->id)->update($user);
+    }
 }
