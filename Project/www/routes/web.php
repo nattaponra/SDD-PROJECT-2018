@@ -22,6 +22,8 @@ Route::get('/registers', 'HomeController@registerOption');
 
 
 
+Route::get("/dashboard","DashboardController@index");
+
 
 Route::get("logout",function(){
     Auth::logout();

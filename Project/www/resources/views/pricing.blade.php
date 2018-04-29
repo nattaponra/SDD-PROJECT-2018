@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
-
 @section("content")
 
     <div class="card-deck mb-3 text-center">

@@ -24,7 +24,7 @@
     </nav>
 
     @if(Auth::check())
-        <a class="p-2 text-dark" href="{{url("/register")}}">คุณ {{Auth::user()->first_name}}</a>
+        <a class="p-2 text-dark" href="{{url("/dashboard")}}">คุณ {{Auth::user()->first_name}}</a>
         <a class="p-2 text-dark" href="{{url("/logout")}}">ออกจากระบบ</a>
     @else
         <a class="btn btn-outline-primary" href="{{url("/register")}}">สมัครสมาชิก</a>
