@@ -44,7 +44,12 @@ $(function(){
             alert("อัพโหลดได้แค่ไฟล์รูปเท่านั้น");
         }
     }); 
-    
+
+    $("#btn-cancel-create-model").click(function(){
+        $('#form-create-model')[0].reset();
+        $("#context-menu-renting").removeClass("hidden");
+        $("#div-create-model-context").addClass("hidden"); 
+    });
     function checkTypeFiles(fileType)
     {
         if (fileType == 'image/jpg') {
