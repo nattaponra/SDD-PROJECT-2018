@@ -33,14 +33,6 @@
     padding-left: 0px; 
 }
 
-.content-renting-menu
-{
-    left: 25%;
-    right: -7%;
-    top: 14%;
-    position: fixed;
-}
-
 .content-padding {
     padding-top: 4%;
     padding-left: 2%;
@@ -79,4 +71,9 @@
     margin-top: 3%;
     border: 2px solid black;
     padding: 15px;
+}
+
+.menu-left 
+{
+    margin: 27px 0px 0px 142px;
 }
