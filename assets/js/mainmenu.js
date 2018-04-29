@@ -7,7 +7,8 @@ $(function(){
         });
 
         $('#edit-model-menu').click(function() {
-            alert("hello");
+            $("#context-menu-renting").addClass("hidden");
+            $("#div-edit-model-context").removeClass("hidden");
         });
 
         $('#delete-model-menu').click(function() {
@@ -50,6 +51,13 @@ $(function(){
         $("#context-menu-renting").removeClass("hidden");
         $("#div-create-model-context").addClass("hidden"); 
     });
+
+    $("#btn-cancel-edit-model").click(function(){
+        $('#form-edit-model')[0].reset();
+        $("#context-menu-renting").removeClass("hidden");
+        $("#div-edit-model-context").addClass("hidden"); 
+    });
+
     function checkTypeFiles(fileType)
     {
         if (fileType == 'image/jpg') {
