@@ -38,29 +38,38 @@
                               <div class="content-renting-menu">
                                     <div class="row align-center">
                                             <div class="content-padding col-3">
-                                              <img src="../assets/images/default-user.png" class="icon-size" alt="สร้างแบบจำลองพื้นที่">
+                                              <img src="../assets/images/rental-management-create.png" id="create-model-menu" class="img-thumbnail icon-size" alt="สร้างแบบจำลองพื้นที่">
                                               <p class="title-size">สร้างแบบจำลองพื้นที่</p>
                                             </div>
                                             <div class="content-padding col-3">
-                                                <img src="../assets/images/default-user.png" class="icon-size" alt="แก้ไขแบบจำลองพื้นที่">
+                                                <img src="../assets/images/rental-management-edit.png" id="edit-model-menu" class="img-thumbnail icon-size" alt="แก้ไขแบบจำลองพื้นที่">
                                                 <p class="title-size">แก้ไขแบบจำลองพื้นที่</p>
                                             </div>
                                             <div class="content-padding col-3">
-                                                <img src="../assets/images/default-user.png" class="icon-size" alt="ลบแบบจำลองพื้นที่">
+                                                <img src="../assets/images/rental-management-delete.png" id="delete-model-menu" class="img-thumbnail icon-size" alt="ลบแบบจำลองพื้นที่">
                                                 <p class="title-size">ลบแบบจำลองพื้นที่</p>
                                             </div>
                                       </div>
                                       <div class="row align-center">
                                             <div class="content-padding col-3">
-                                                <img src="../assets/images/default-user.png" class="icon-size" alt="นำเข้าหรือแก้ไขราคาพื้นที่">
+                                                <img src="../assets/images/rental-management-import.png" id="import-price-menu" class="img-thumbnail icon-size" alt="นำเข้าหรือแก้ไขราคาพื้นที่">
                                                 <p class="title-size">นำเข้าหรือแก้ไขราคาพื้นที่</p>
                                             </div>
                                             <div class="content-padding col-3">
-                                                <img src="../assets/images/default-user.png" class="icon-size" alt="การเช่าพื้นที่">
-                                                <p class="title-size">การเช่าพื้นที่</p>
+                                                <img src="../assets/images/rental-management-rent.png" id="rent-list-menu" class="img-thumbnail icon-size" alt="การเช่าพื้นที่">
+                                                <div class="dropdown">
+                                                    <button class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown">
+                                                        การเช่าพื้นที่
+                                                        <span class="caret"></span></button>
+                                                        <ul class="dropdown-menu">
+                                                                <li><a href="#">สร้างการเช่าพื้นที่</a></li>
+                                                                <li><a href="#">แก้ไขการเช่าพื้นที่</a></li>
+                                                                <li><a href="#">ลบการเช่าพื้นที่</a></li>
+                                                              </ul>
+                                                </div>
                                             </div>
                                             <div class="content-padding col-3">
-                                                <img src="../assets/images/default-user.png" class="icon-size" alt="สร้างแบบจำลองพื้นที่">
+                                                <img src="../assets/images/rental-management-search.png" id="search-area-menu" class="img-thumbnail icon-size" alt="สร้างแบบจำลองพื้นที่">
                                                 <p class="title-size">ค้นหารายละเอียด</p>
                                             </div>
                                       </div>
@@ -80,6 +89,7 @@
         <script  src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
         
+        <script src="../assets/js/mainmenu.js"></script>
         <script src="../assets/js/bootstrap.min.js"></script>
         <script src="../assets/js/vendor/holder.min.js"></script>
         <script>
