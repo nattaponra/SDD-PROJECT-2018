@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="../assets/images/logo.png">
+    <title>RMSE</title>
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/rental.css" rel="stylesheet">
+    <link href="../assets/css/share.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+        <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+           <div class="nav-logo-left">
+                <img class="align-middle nav-logo-left-img" src="../assets/images/logo.png">
+                <h3 class="align-middle">RMSE</h3>
+           </div>
+            <div class="nav-right">
+                <button class="btn btn-primary" type="submit">ออกจากระบบ</button>
+            </div>
+        </nav>
+          <div class="container-fluid">
+              <div class="div-content row">
+                  <div class="col-2 nav-menu-vertical">
+                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">หน้าแรก</a>
+                        <a class="nav-link" id="v-pills-renting-tab" data-toggle="pill" href="#v-pills-renting" role="tab" aria-controls="v-pills-renting" aria-selected="false">การสำรองและการจัดการพื้นที่</a>
+                        <a class="nav-link" id="v-pills-management-data-tab" data-toggle="pill" href="#v-pills-management-data" role="tab" aria-controls="v-pills-management-data" aria-selected="false">การจัดการข้อมูล</a>
+                        <a class="nav-link" id="v-pills-report-tab" data-toggle="pill" href="#v-pills-report" role="tab" aria-controls="v-pills-report" aria-selected="false">การออกรายงาน</a>
+                        <a class="nav-link" id="v-pills-payment-tab" data-toggle="pill" href="#v-pills-payment" role="tab" aria-controls="v-pills-payment" aria-selected="false">การชำระเงิน</a>
+                        <a class="nav-link" id="v-pills-comment-tab" data-toggle="pill" href="#v-pills-comment" role="tab" aria-controls="v-pills-comment" aria-selected="false">การร้องเรียน</a>
+                    </div>
+                  </div>
+                  <div class="col-10">
+                      <div class="tab-content" id="v-pills-tabContent">
+                          <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">เนื้อที่สำหรับหน้าแรก</div>
+                          <!--searchdetail_who_store-->
+                          <div class="tab-pane fade" id="v-pills-renting" role="tabpanel" aria-labelledby="v-pills-renting-tab">
+                              <div id="context-menu-renting">
+                                   <div style="margin-top: 4%;">
+                                        <h2 style="padding-left: 30%;">ค้นหารายละเอียดผู้เช่าพื้นที่</h2>
+                                   <div class="padding-left-context-search">
+                                        <form class="form-inline width-100">
+                                                <div class="row width-100" >
+                                                    <div class="form-group margin-right-3">
+                                                        <label for="event" class="padding-right-menu-search">กิจกรรม</label>
+                                                        <select id="inputevent" class="form-control">
+                                                            <option selected>เลือกกิจกรรม</option>
+                                                            <option>งานบานานา</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group margin-right-3">
+                                                        <label for="inputareamodel" class="padding-right-menu-search">แผนผังพื้นที่</label>
+                                                        <select id="inputareamodel" class="form-control">
+                                                        <option selected>เลือกแผงผัง</option>
+                                                        <option>แผนผังA</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group margin-right-3">
+                                                        <label for="inputstore" class="padding-right-menu-search">ชื่อร้านค้า</label>
+                                                        <input type="text" class="form-control" id="inputstore">
+                                                    </div>
+                                                    <div class="form-group margin-right-3">
+                                                            <button type="button" class="btn btn-primary"><i class="fa fa-search"></i>ค้นหา</button>
+                                                    </div>
+                                                </div>
+                                        </form>
+
+                                        <!--result of search-->
+                                        <div class="row" style="width: 100%;margin-top: 3%;">
+                                        <h2 style="padding-left: 30%;">ผลลัพธ์การค้นหา</h2>
+                                        <div style="display: block;width: 100%;">
+                                            <table class="table table-hover" style="width: 70%;margin-left:10%;margin-top: 2%;">
+                                                <thead>
+                                                    <tr>
+                                                    <th scope="col">ลำดับ</th>
+                                                    <th scope="col">รหัสพื้นที่</th>
+                                                    <th scope="col">ชื่อร้านค้า</th>
+                                                    <th scope="col">วันที่จัดแสดง</th>
+                                                    <th scope="col">สถานะปัจจุบัน</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>A-01</td>
+                                                    <td>Aelloword</td>
+                                                    <td>10/11/2560</td>
+                                                    <td>กำลังเปิดการแสดง</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>A-02</td>
+                                                    <td>Aenana</td>
+                                                    <td>10/11/2560</td>
+                                                    <td>กำลังเปิดการแสดง</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <th scope="row">3</th>
+                                                    <td>A-03</td>
+                                                    <td>Aedonna</td>
+                                                    <td>10/09/2560</td>
+                                                     <td>ปิดการแสดง</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        </div>
+                                        <!--result of search-->
+                                </div> 
+                             </div>
+                          </div> 
+                         </div>
+                           <!--end searchdetail_who_store-->
+                          <div class="tab-pane fade" id="v-pills-management-data" role="tabpanel" aria-labelledby="v-pills-management-data-tab">เนื้อที่จัดการข้อมูล</div>
+                          <div class="tab-pane fade" id="v-pills-report" role="tabpanel" aria-labelledby="v-pills-report-tab">เนื้อที่สำหรับการออกรายงาน</div>
+                          <div class="tab-pane fade" id="v-pills-payment" role="tabpanel" aria-labelledby="v-pills-payment-tab">เนื้อที่สำหรับการชำระเงิน</div>
+                          <div class="tab-pane fade" id="v-pills-comment" role="tabpanel" aria-labelledby="v-pills-comment-tab">เนื้อที่สำหรับการร้องเรียน</div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+         
+        <script  src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+        
+        <script src="../assets/js/mainmenu.js"></script>
+        <script src="../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/vendor/holder.min.js"></script>
+        <script>
+            Holder.addTheme('thumb', {
+                bg: '#55595c',
+                fg: '#eceeef',
+                text: 'Thumbnail'
+            });
+        </script>        
+</body>
+</html>
