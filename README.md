@@ -1,3 +1,3 @@
 # SSD_UI
 ## Demo
-https://nattaponra.github.io/SSD_UI/
+https://nattaponra.github.io/SSD_UI/pages/
