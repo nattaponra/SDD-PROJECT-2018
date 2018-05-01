@@ -15,21 +15,21 @@
 
 <body>
 
-<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+<div style="color:white;" class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3  border-bottom box-shadow  bg-dark  ">
 
-    <h5 class="my-0 mr-md-auto font-weight-normal"><a style="text-decoration: none;" href="{{url("/")}}"><img style="max-width: 40px;" src="{{url('/')}}/assets/images/logo.png"> ระบบการจัดการการสำรองพื้นที่</a></h5>
-    <nav class="my-2 my-md-0 mr-md-3">
-        <a class="p-2 text-dark" href="#">ฟังชั่นการใช้งาน</a>
-        <a class="p-2 text-dark" href="#">สนับสนุน</a>
-        <a class="p-2 text-dark" href="#">ค่าใช้จ่าย</a>
+    <h5 class="my-0 mr-md-auto font-weight-normal"><a style="text-decoration: none;" href="{{url("/")}}"><img style="max-width: 40px;" src="{{url('/')}}/assets/images/logo.png"> RMSE</a></h5>
+    <nav class="my-2 my-md-0 mr-md-3 ">
+        <a class="p-2 text-white" href="#">ฟังชั่นการใช้งาน</a>
+        <a class="p-2 text-white" href="#">สนับสนุน</a>
+        <a class="p-2 text-white" href="#">ค่าใช้จ่าย</a>
     </nav>
 
     @if(Auth::check())
-        <a class="p-2 text-dark" href="{{url("/dashboard")}}">คุณ {{Auth::user()->first_name}}</a>
-        <a class="p-2 text-dark" href="{{url("/logout")}}">ออกจากระบบ</a>
+        <a class="p-2 text-white" href="{{url("/dashboard")}}">คุณ {{Auth::user()->first_name}}</a>
+        <a class="p-2 text-white" href="{{url("/logout")}}">ออกจากระบบ</a>
     @else
-        <a class="btn btn-outline-primary" href="{{url("/register")}}">สมัครสมาชิก</a>
-        <a class="btn btn-outline-primary" href="{{url("/login")}}">เข้าสู่ระบบ</a>
+        <a class="btn btn-outline-light" href="{{url("/register")}}">สมัครสมาชิก</a>
+        <a class="btn btn-outline-light" href="{{url("/login")}}">เข้าสู่ระบบ</a>
     @endif
 
 </div>
