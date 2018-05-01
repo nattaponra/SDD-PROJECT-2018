@@ -27,6 +27,11 @@ Route::get("/dashboard","DashboardController@index");
 Route::get("/dashboard/profile","UserController@profile");
 Route::post("/dashboard/profile/{userId}","UserController@storeProfile");
 
+
+//Upgrade User
+Route::get("/dashboard/upgrade/{type}","UserController@upgradeUser");
+
+
 Route::get("logout",function(){
     Auth::logout();
     return redirect("/");

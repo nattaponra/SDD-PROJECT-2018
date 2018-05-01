@@ -10,6 +10,10 @@
         <div class="alert alert-success">
             <strong>Success!</strong> {{session("message")}}
         </div>
+    @elseif(session("status")=="fail")
+        <div class="alert alert-danger">
+            <strong>!</strong> {{session("message")}}
+        </div>
     @endif
     <div class="row">
         <div class="col-md-6 mb-3">
