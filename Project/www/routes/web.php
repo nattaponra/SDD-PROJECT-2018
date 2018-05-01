@@ -33,13 +33,14 @@ Route::get("/dashboard/upgrade/{type}","UserController@upgradeUser");
 
 
 //Package Detail
-Route::get("/dashboard/package","PackageController@packageDetail");
+Route::get("/dashboard/package/{type}","PackageController@packageDetail");
 
 //Payment
 Route::get("/dashboard/payment/{type}","PaymentController@payment");
 Route::post("/dashboard/payment/{type}","PaymentController@storePayment");
 
 Route::get("/dashboard/payment/success/{token}","PaymentController@successPayment");
+Route::get("/dashboard/upgrade/success/{token}","PaymentController@successUpgrade");
 
 
 Route::get("/organizer/management/location","OrganizerController@manageLocation");
@@ -53,6 +54,7 @@ Route::get("organizer/management/location/delete/{areaId}","OrganizerController@
 Route::post("organizer/management/storeSubArea","SubAreaController@storeSubArea");
 Route::get("organizer/management/deleteSubArea/{subAreaId}","SubAreaController@deleteSubArea");
 
+Route::get("image/area/{area_id}","ImageController@getAreaImage");
 
 Route::get("logout",function(){
     Auth::logout();

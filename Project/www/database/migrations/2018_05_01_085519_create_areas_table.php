@@ -17,6 +17,7 @@ class CreateAreasTable extends Migration
             $table->increments('id');
             $table->string("name");
             $table->text("address");
+            $table->text("map_path");
             $table->double("width");
             $table->double("height");
             $table->integer("user_id");

@@ -25,7 +25,10 @@ class OrganizerController extends Controller
     }
 
     public function storeLocation(Request $request){
-        $this->areaModel->createArea($request->all());
+        $path  = $request->file('map')->store('areas_map');
+        $input = $request->all();
+        $input["map_path"] = $path;
+        $this->areaModel->createArea($input);
         return  redirect("organizer/management/location")->with(["status"=>"success","message"=>"สร้างพื้นที่สำเร็จ"]);
     }
 
@@ -35,8 +38,15 @@ class OrganizerController extends Controller
     }
 
     public function updateLocation(Request $request, $areaId){
-        $area = Area::find($areaId);
-        $area->update($request->all());
+        $area  = Area::find($areaId);
+        $input = $request->all();
+        if($request->file('map')){
+            $path  = $request->file('map')->store('areas_map');
+            $input["map_path"] = $path;
+
+        }
+
+        $area->update($input);
         return  redirect("organizer/management/location")->with(["status"=>"success","message"=>"แก้ไขพื้นที่สำเร็จ"]);
     }
     public function deleteLocation($areaId){

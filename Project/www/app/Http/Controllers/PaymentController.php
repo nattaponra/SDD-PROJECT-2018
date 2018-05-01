@@ -15,6 +15,10 @@ class PaymentController extends Controller
     }
 
     public function payment($type){
+        if($type=="book"){
+            Auth::user()->upgradeAccount(3);
+            return redirect("/dashboard/upgrade/success/".md5($type));
+        }
         return view("dashboard.payment");
     }
 
@@ -44,6 +48,9 @@ class PaymentController extends Controller
 
         return view("dashboard.payment-success");
     }
+    public function successUpgrade(){
 
+        return view("dashboard.upgrade-success");
+    }
 
 }

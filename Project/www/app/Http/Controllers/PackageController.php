@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class PackageController extends Controller
 {
-    public function packageDetail(){
-            return view("dashboard.package-detail");
+    public function packageDetail($type){
+            return view("dashboard.package-detail",compact("type"));
     }
 }

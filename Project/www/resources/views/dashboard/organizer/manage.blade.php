@@ -22,17 +22,21 @@
             font-size: 15px;
         }
     </style>
-<br><br>
+     <br><br>
     <div class="row"  >
-
+        <div class="col-sm">
+            <img onclick="window.location.href='{{url("organizer/management/location")}}'" class="img" src="{{url("assets/images/square-layouting-with-black-square-in-east-area.png")}}">
+            <h2 class="menu">สถานที่ทั้งหมด</h2>
+            <br>
+        </div>
         <div class="col-sm">
             <img onclick="window.location.href='{{url("organizer/management/location/create")}}'" class="img" src="{{url("assets/images/rental-management-create.png")}}">
-            <h2 class="menu">สร้างพื้นที่จัดงาน</h2>
+            <h2 class="menu">สร้างสถานที่จัดงาน</h2>
             <br>
         </div>
         <div class="col-sm"  >
             <img onclick="window.location.href='{{url("/organizer/management/location/subarea")}}'" class="img" src="{{url("assets/images/rental-management-edit.png")}}">
-            <h2 class="menu">แก้ไขพื้นที่จัดงาน</h2>
+            <h2 class="menu">แก้ไขพื้นที่ย่อย</h2>
             <br>
         </div>
         <div class="col-sm"  >
@@ -67,7 +71,7 @@
             </div>
         @endif
     </div>
-
+    <h3>สถานที่ทั้งหมด</h3>
     <table class="table">
         <thead>
         <tr>

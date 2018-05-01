@@ -24,15 +24,19 @@
     </style>
     <br><br>
     <div class="row"  >
-
+        <div class="col-sm">
+            <img onclick="window.location.href='{{url("organizer/management/location")}}'" class="img" src="{{url("assets/images/square-layouting-with-black-square-in-east-area.png")}}">
+            <h2 class="menu">สถานที่ทั้งหมด</h2>
+            <br>
+        </div>
         <div class="col-sm">
             <img onclick="window.location.href='{{url("organizer/management/location/create")}}'" class="img" src="{{url("assets/images/rental-management-create.png")}}">
-            <h2 class="menu">สร้างพื้นที่จัดงาน</h2>
+            <h2 class="menu">สร้างสถานที่จัดงาน</h2>
             <br>
         </div>
         <div class="col-sm"  >
             <img onclick="window.location.href='{{url("/organizer/management/location/subarea")}}'" class="img" src="{{url("assets/images/rental-management-edit.png")}}">
-            <h2 class="menu">แก้ไขพื้นที่จัดงาน</h2>
+            <h2 class="menu">แก้ไขพื้นที่ย่อย</h2>
             <br>
         </div>
         <div class="col-sm"  >
@@ -70,13 +74,18 @@
 
     <br>
     <h4>จัดการพื้นที่ย่อย</h4>
+    @if($area)
+        <img class="img-fluid img-thumbnail" src="{{$area->getUrlImage()}}">
+
+    @endif
+    <hr>
     <form id="area-form" method="get">
     <div class="input-group mb-12">
 
             {!! Form::select('area_id',$areas,null,["class"=>"form-control","required"=>"","id"=>"area_id"]) !!}
 
           <div class="input-group-append">
-            <button class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal"  type="button">เพิ่มพื้นที่ย่อย</button>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"  type="button">เพิ่มพื้นที่ย่อย</button>
         </div>
     </div>
     </form>
@@ -92,9 +101,9 @@
         </thead>
         <tbody>
         @if($subAreas)
-        @foreach($subAreas as $subArea)
+        @foreach($subAreas as $no=>$subArea)
         <tr>
-            <th scope="row">1</th>
+            <th scope="row">{{$no+1}}.</th>
             <td>{{$subArea->sub_area_number}}</td>
             <td>{{$subArea->width."X".$subArea->height}}</td>
             <td>   <a  onclick="return confirm('คุณแน่ใจหรือไม่ที่จะลบ?')" href="{{url("organizer/management/deleteSubArea/".$subArea->id)}}" class="btn btn-primary">ลบ</a> </td>
