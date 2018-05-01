@@ -32,6 +32,17 @@ Route::post("/dashboard/profile/{userId}","UserController@storeProfile");
 Route::get("/dashboard/upgrade/{type}","UserController@upgradeUser");
 
 
+//Package Detail
+Route::get("/dashboard/package","PackageController@packageDetail");
+
+//Payment
+Route::get("/dashboard/payment/{type}","PaymentController@payment");
+Route::post("/dashboard/payment/{type}","PaymentController@storePayment");
+
+Route::get("/dashboard/payment/success/{token}","PaymentController@successPayment");
+
+
+
 Route::get("logout",function(){
     Auth::logout();
     return redirect("/");
