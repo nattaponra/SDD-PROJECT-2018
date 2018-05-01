@@ -3,3 +3,4 @@
 *.restored
 *.initialized
 Project/dockers/mysql/
+ModelExample/
