@@ -32,6 +32,10 @@ Route::post("/dashboard/profile/{userId}","UserController@storeProfile");
 Route::get("/dashboard/upgrade/{type}","UserController@upgradeUser");
 
 
+//Package Detail
+Route::get("/dashboard/packageDetail/{packageType}","PackageController@packageDetail");
+
+
 Route::get("logout",function(){
     Auth::logout();
     return redirect("/");
