@@ -41,3 +41,12 @@ body
     align-content: center;
 }
 
+.button-margin-2
+{
+    margin: 2%;
+}
+
+.bottom-input-form
+{
+    margin-bottom: 2%;
+}
