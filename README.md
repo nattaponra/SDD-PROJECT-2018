@@ -1,6 +1,6 @@
 # SSD_UI
 ## Demo
-https://nattaponra.github.io/SSD_UI/pages/
+https://nattaponra.github.io/SDD-PROJECT-2018/pages
 ## วิธีการ Run เว็บไซต์
 ### 1. ติดตั้ง docker 
 - ดาวน์โหลด docker (stable) https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe
