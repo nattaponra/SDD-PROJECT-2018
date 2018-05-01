@@ -33,13 +33,14 @@ Route::get("/dashboard/upgrade/{type}","UserController@upgradeUser");
 
 
 //Package Detail
-Route::get("/dashboard/package","PackageController@packageDetail");
+Route::get("/dashboard/package/{type}","PackageController@packageDetail");
 
 //Payment
 Route::get("/dashboard/payment/{type}","PaymentController@payment");
 Route::post("/dashboard/payment/{type}","PaymentController@storePayment");
 
 Route::get("/dashboard/payment/success/{token}","PaymentController@successPayment");
+Route::get("/dashboard/upgrade/success/{token}","PaymentController@successUpgrade");
 
 
 Route::get("/organizer/management/location","OrganizerController@manageLocation");
@@ -49,7 +50,18 @@ Route::post("organizer/management/location/create","OrganizerController@storeLoc
 Route::get("organizer/management/location/edit/{areaId}","OrganizerController@editLocation");
 Route::post("organizer/management/location/edit/{areaId}","OrganizerController@updateLocation");
 Route::get("organizer/management/location/delete/{areaId}","OrganizerController@deleteLocation");
+Route::post("organizer/management/storeSubArea","SubAreaController@storeSubArea");
+Route::get("organizer/management/deleteSubArea/{subAreaId}","SubAreaController@deleteSubArea");
 
+Route::get("image/area/{area_id}","ImageController@getAreaImage");
+
+
+Route::get("/dashboard/booking/search","BookingController@search");
+Route::get("dashboard/booking/detail/area/{id}","BookingController@detailArea");
+Route::get("dashboard/booking/book/{id}","BookingController@payment");
+Route::post("dashboard/booking/book/{id}","BookingController@storePayment");
+Route::get("dashboard/booking/success","BookingController@successPayment");
+Route::get("/dashboard/my-booking","BookingController@myBooking");
 
 
 Route::get("logout",function(){

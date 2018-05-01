@@ -54,7 +54,7 @@ class UserController extends Controller
                 return redirect("dashboard/profile")->with(["status"=>"fail","message"=>"กรุณากรอกข้อมูลของคุณให้ครับถ้วน ก่อนทำการอัพเดตบัญชี"]);
             }
         }
-        return redirect("dashboard/package");
+        return redirect("dashboard/package/".$type);
     }
 
 
