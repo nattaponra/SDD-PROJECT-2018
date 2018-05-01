@@ -42,6 +42,10 @@ Route::post("/dashboard/payment/{type}","PaymentController@storePayment");
 Route::get("/dashboard/payment/success/{token}","PaymentController@successPayment");
 
 
+Route::get("/organizer/management/location","OrganizerController@manageLocation");
+Route::get("organizer/management/location/create","OrganizerController@createLocation");
+Route::post("organizer/management/location/create","OrganizerController@storeLocation");
+
 
 Route::get("logout",function(){
     Auth::logout();
