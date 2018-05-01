@@ -4,7 +4,7 @@
 
 @section("dashboard-content")
 
-    <h4 class="mb-3">Billing address</h4>
+
     {{--<form class="needs-validation" novalidate="">--}}
         {{--<div class="row">--}}
             {{--<div class="col-md-6 mb-3">--}}
