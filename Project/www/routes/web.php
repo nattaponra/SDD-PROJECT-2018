@@ -50,6 +50,8 @@ Route::get("organizer/management/location/edit/{areaId}","OrganizerController@ed
 Route::post("organizer/management/location/edit/{areaId}","OrganizerController@updateLocation");
 Route::get("organizer/management/location/delete/{areaId}","OrganizerController@deleteLocation");
 
+Route::post("organizer/management/storeSubArea","SubAreaController@storeSubArea");
+Route::get("organizer/management/deleteSubArea/{subAreaId}","SubAreaController@deleteSubArea");
 
 
 Route::get("logout",function(){
