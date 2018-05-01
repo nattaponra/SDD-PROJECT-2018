@@ -43,8 +43,13 @@ Route::get("/dashboard/payment/success/{token}","PaymentController@successPaymen
 
 
 Route::get("/organizer/management/location","OrganizerController@manageLocation");
+Route::get("/organizer/management/location/subarea","OrganizerController@subLocation");
 Route::get("organizer/management/location/create","OrganizerController@createLocation");
 Route::post("organizer/management/location/create","OrganizerController@storeLocation");
+Route::get("organizer/management/location/edit/{areaId}","OrganizerController@editLocation");
+Route::post("organizer/management/location/edit/{areaId}","OrganizerController@updateLocation");
+Route::get("organizer/management/location/delete/{areaId}","OrganizerController@deleteLocation");
+
 
 
 Route::get("logout",function(){
