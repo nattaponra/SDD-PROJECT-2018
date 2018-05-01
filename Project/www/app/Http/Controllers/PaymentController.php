@@ -32,7 +32,8 @@ class PaymentController extends Controller
         $transaction = [
             'payment_status'   => 'success',
             'payment_datetime' => date("Y-m-d H:i:s"),
-            'payment_type'     => 'credit-card'
+            'payment_type'     => 'credit-card',
+            'user_id' => Auth::user()->id
         ];
 
          $result =  $this->paymentTransactionModel->createTransaction($transaction);
