@@ -55,6 +55,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get("/dashboard/my-booking","BookingController@myBooking");
     Route::get("dashboard/create/store/{sub_area_id}","StoreController@createStore");
     Route::post("dashboard/create/store/{sub_area_id}","StoreController@storeStore");
+
+    Route::get("dashboard/payment","PaymentController@index");
 });
 
 

@@ -23,12 +23,11 @@
                     <h4 class="my-0 font-weight-normal">อัพเกรดบัญชีสำหรับผู้ต้องการจัดงาน</h4>
                 </div>
                 <div class="card-body">
-                    <h1 class="card-title pricing-card-title">15,000 <small class="text-muted">/ 3 เดือน</small></h1>
+                    <h1 class="card-title pricing-card-title">15,000 <small class="text-muted">/เดือน</small></h1>
                     <ul class="list-unstyled mt-3 mb-4">
-                        <li>สามารถสร้างแบบจำลองถานที่ได้</li>
-                        <li>10 GB of storage</li>
-                        <li>Priority email support</li>
-                        <li>Help center access</li>
+                        <li>สามารถสร้างแบบจำลองพื้นที่ได้</li>
+                        <li>บริการสนับสนุนตลอด 24 ชม</li>
+                       
                     </ul>
                     <a href="{{url("/dashboard/payment/organizer")}}" class="btn btn-lg btn-block btn-primary">อัพเกรด</a>
                 </div>
@@ -39,12 +38,11 @@
                         <h4 class="my-0 font-weight-normal">อัพเกรดบัญชีสำหรับผู้ต้องการสำรองพื้นที่</h4>
                     </div>
                     <div class="card-body">
-
+                    <h1 class="card-title pricing-card-title">1,000 <small class="text-muted">/ สถานที่</small></h1>
                         <ul class="list-unstyled mt-3 mb-4">
-                            <li>สามารถสร้างแบบจำลองถานที่ได้</li>
-                            <li>10 GB of storage</li>
-                            <li>Priority email support</li>
-                            <li>Help center access</li>
+                            <li>สามารถสร้างการสำรองพื้นที่ได้</li>
+                            <li>บริการสนับสนุนตลอด 24 ชม</li>
+                           
                         </ul>
                         <a href="{{url("/dashboard/payment/book")}}" class="btn btn-lg btn-block btn-primary">อัพเกรด</a>
                     </div>

@@ -22,9 +22,9 @@
                 <h4 class="my-0 font-weight-normal">ระบบจองที่มีคุณภาพ</h4>
             </div>
             <div class="card-body">
-                <h1 class="card-title pricing-card-title">15,000 <small class="text-muted">/ สถานที่</small></h1>
+                <h1 class="card-title pricing-card-title">15,000 <small class="text-muted">/ เดือน</small></h1>
                 <ul class="list-unstyled mt-3 mb-4">
-                    <li>สามารถสร้างแบบจำลองถานที่ได้</li>
+                    <li>สามารถสร้างแบบจำลองพื้นที่ได้</li>
                     <li>10 GB of storage</li>
                     <li>Priority email support</li>
                     <li>Help center access</li>
@@ -37,10 +37,10 @@
                 <h4 class="my-0 font-weight-normal">หาพื้นที่ออกบูท</h4>
             </div>
             <div class="card-body">
-                <h1 class="card-title pricing-card-title"><small class="text-muted">ขึ้นอยู่กับสถานที่</small> </h1>
+            <h1 class="card-title pricing-card-title">1,000 <small class="text-muted">/ สถานที่</small></h1>
                 <ul class="list-unstyled mt-3 mb-4">
                     <li></li>
-                    <li>15 GB of storage</li>
+                    <li>สามารถจำลองพื้นที่ได้</li>
                     <li>Phone and email support</li>
                     <li>Help center access</li>
                 </ul>

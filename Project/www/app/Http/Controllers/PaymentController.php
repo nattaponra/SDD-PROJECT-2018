@@ -13,7 +13,10 @@ class PaymentController extends Controller
     {
         $this->paymentTransactionModel = $paymentTransaction;
     }
-
+    public function index(){
+        $paymentHistories = $this->paymentTransactionModel->where("user_id",Auth::user()->id)->get();
+        return view("dashboard.organizer.payment",compact("paymentHistories"));
+    }
     public function payment($type){
         if($type=="book"){
             Auth::user()->upgradeAccount(3);
