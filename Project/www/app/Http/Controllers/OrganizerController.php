@@ -69,6 +69,7 @@ class OrganizerController extends Controller
 
 
         $areas = Area::pluck("name","id");
+        $areas->prepend('None', 0);
         return view("dashboard.organizer.manage-subarea",compact("area","areas","subAreas"));
     }
 }

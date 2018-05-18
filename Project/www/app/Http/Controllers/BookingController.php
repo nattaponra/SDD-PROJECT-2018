@@ -50,7 +50,8 @@ class BookingController extends Controller
 
         $result =  $this->paymentTransactionModel->createTransaction($transaction);
         $this->bookingModel->createBooking(Auth::user()->id,$id);
-        return redirect("dashboard/booking/success");
+
+        return redirect("dashboard/create/store/".$id);
     }
 
     public function successPayment(){
