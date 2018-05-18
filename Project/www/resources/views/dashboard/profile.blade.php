@@ -24,6 +24,10 @@
             <label for="lastName">นามสกุล</label>
             {!! Form::text('last_name',null,["class"=>"form-control","required"=>""]) !!}
         </div>
+        <div class="col-md-12 mb-12">
+            <label for="lastName">รหัสบัตรประชาชน</label>
+            {!! Form::text('card_id',null,["class"=>"form-control","required"=>""]) !!}
+        </div>
     </div>
 
 

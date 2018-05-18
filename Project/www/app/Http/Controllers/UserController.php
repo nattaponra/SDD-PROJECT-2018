@@ -47,6 +47,7 @@ class UserController extends Controller
             empty($user->area),
             empty($user->province),
             empty($user->postal_code),
+            empty($user->card_id),
          ];
 
         foreach ($verifyLists as $list){

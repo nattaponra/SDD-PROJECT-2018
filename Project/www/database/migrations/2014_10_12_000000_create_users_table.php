@@ -31,6 +31,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->integer('role_id')->index();
             $table->string('password');
+            $table->text('card_id');
             $table->rememberToken();
             $table->timestamps();
         });
