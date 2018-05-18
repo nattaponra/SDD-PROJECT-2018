@@ -19,7 +19,7 @@
 
     <h5 class="my-0 mr-md-auto font-weight-normal"><a style="text-decoration: none;" href="{{url("/")}}"><img style="max-width: 40px;" src="{{url('/')}}/assets/images/logo.png"> RMSE</a></h5>
     <nav class="my-2 my-md-0 mr-md-3 ">
-        <a class="p-2 text-white" href="#">ฟังชั่นการใช้งาน</a>
+        <a class="p-2 text-white" href="#">ฟังก์ชั่นการใช้งาน</a>
         <a class="p-2 text-white" href="#">สนับสนุน</a>
         <a class="p-2 text-white" href="#">ค่าใช้จ่าย</a>
     </nav>
