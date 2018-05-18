@@ -90,8 +90,9 @@
             <th scope="row">{{$no+1}}.</th>
             <td>{{$area->name}}</td>
             <td>{{$area->width."x".$area->height}}</td>
-            <td>0</td>
-            <td>0</td>
+            <td>{{$area->emptyCount()}}</td>
+            <td>{{$area->allCount()}}</td>
+      
             <td>
                 <div class="btn-group" role="group">
                     <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
