@@ -27,8 +27,8 @@
         <tr>
             <th scope="row">{{$no+1+(($page-1)*5)}}.</th>
             <td>{{$area->name}}</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <td>{{$area->allCount()}}</td>
+            <td>{{$area->emptyCount()}}</td>
             <td><a  href="{{url("dashboard/booking/detail/area/".$area->id)}}" class="btn btn-outline-primary">ดูรายละเอียด</a></td>
         </tr>
         @endforeach
