@@ -35,10 +35,10 @@
             Please enter a valid email address for shipping updates.
         </div>
     </div>
-    <div class="mb-3">
+    <!-- <div class="mb-3">
         <label for="address">ที่อยู่</label>
         {!! Form::text('address',null,["class"=>"form-control"  ]) !!}
-    </div>
+    </div> -->
     <div class="row">
         <div class="col-md-6 mb-3">
             <label for="firstName">บ้านเลขที่</label>
@@ -58,11 +58,11 @@
         </div>
         <div class="col-md-6 mb-3">
             <label for="firstName">แขวง/ตำบล</label>
-            {!! Form::text('area',null,["class"=>"form-control" ]) !!}
+            {!! Form::text('sub_area',null,["class"=>"form-control" ]) !!}
         </div>
         <div class="col-md-6 mb-3">
             <label for="lastName">เขต/ตำบล</label>
-            {!! Form::text('road',null,["class"=>"form-control" ]) !!}
+            {!! Form::text('area',null,["class"=>"form-control" ]) !!}
         </div>
         <div class="col-md-6 mb-3">
             <label for="firstName">จังหวัด</label>

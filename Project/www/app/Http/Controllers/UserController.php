@@ -37,7 +37,7 @@ class UserController extends Controller
         $user = Auth::user();
 
         $verifyLists = [
-            empty($user->address),
+            
             empty($user->tel_home),
             empty($user->tel_mobile),
             empty($user->house_no),
