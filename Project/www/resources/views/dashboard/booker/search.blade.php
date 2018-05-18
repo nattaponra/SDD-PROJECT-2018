@@ -17,7 +17,7 @@
         <tr>
             <th scope="col">#</th>
             <th scope="col">ชื่อสถานที่</th>
-            <th scope="col">จำนวนพื้นที่</th>
+            <th scope="col">จำนวนพื้นทั้งหมด</th>
             <th scope="col">จำนวนพื้นที่ที่เหลือ</th>
             <th scope="col"> </th>
         </tr>

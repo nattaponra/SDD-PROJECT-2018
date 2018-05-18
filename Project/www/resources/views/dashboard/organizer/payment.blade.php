@@ -18,8 +18,8 @@
     <tr>
       <th scope="row">{{$no+1}}.</th>
       <td>{{$paymentHistory->created_at}}</td>
-      <td>{{Auth::user()->user_type==2?"ชำระค่าบริการสำหรับผู้จัดงาน":"ชำระค่าบริการสำหรับผู้จองพื้นที่"}}</td>
-      <td>{{Auth::user()->user_type==2?"15,000":"1,000"}} บาท</td>
+      <td>{{Auth::user()->role_id==2?"ชำระค่าบริการสำหรับผู้จัดงาน":"ชำระค่าบริการสำหรับผู้จองพื้นที่"}}</td>
+      <td>{{Auth::user()->role_id==2?"15,000":"1,000"}} บาท</td>
     </tr>
   @endforeach
    

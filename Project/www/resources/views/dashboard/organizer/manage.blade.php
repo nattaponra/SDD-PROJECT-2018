@@ -79,7 +79,7 @@
             <th scope="col">ชื่อสถานที่</th>
             <th scope="col">ขนาดพื้นที่</th>
             <th scope="col">จำนวนที่ว่าง</th>
-            <th scope="col">จำนวนพื่นที่ทั้งหมด</th>
+            <th scope="col">จำนวนพื้นทั้งหมด</th>
             <th scope="col"> </th>
         </tr>
         </thead>

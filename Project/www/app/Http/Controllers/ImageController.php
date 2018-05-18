@@ -16,6 +16,7 @@ class ImageController extends Controller
         return  $image->response();
     }
     public function getStoreImage($store_id){
+        ini_set('memory_limit', '-1');
         $store  = Store::find($store_id);
         $image = Image::make(Storage::get($store->logo_path));
         return  $image->response();
